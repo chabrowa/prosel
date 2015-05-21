@@ -1,0 +1,46 @@
+<head>
+<title>Prosel</title>
+</head>
+<body>
+<h1>Prosel</h1>
+{{> steps}}
+
+
+
+</body>
+
+<template name="steps">
+<form class="step1">
+  <label for="shape">Shape: </label> 
+  <select id="shape">
+  <option value="Shells">Shells</option>
+  <option value="Panels">Panels</option>
+  <option value="Frames">Frames</option>
+  <option value="Stiffeners">Stiffeners</option>
+  <option value="Tubes">Tubes</option>
+  <option value="Tanks">Cylindrical Pressure</option>
+  <option value="Complex">Complex multi feature</option>
+  <input type="submit">
+</select>
+</form>
+
+<form class="step2">
+<label for="ExtraShape">Extra Shape: </label> 
+<select id="ExtraShape">
+	{{#each step1}}
+		<option value="{{this}}">{{this}}</option>
+	{{/each}}
+</select>
+	<input type="submit">
+
+</form>
+
+
+<form class="step3">
+<label for="MaxSize">Max Size: </label> 
+<input type="text" id="maxSize">
+
+</form>
+
+
+</template>

@@ -1,0 +1,140 @@
+The whole 5th level hasn't been included yet because it needed major reworking. Anyway most of these will be changed when Andrew sends me another excel.
+
+
+MF-> Mat form (name of the material).
+Procces -> Procces (Several materials will have the same procces, acording to the excel).
+Shape -> It can be one  of these: "Shells", "Panels", "Frames", "Stiffeners", "Tubes", "Tanks", "Multi".
+ExtraShape -> It can be of these: "2D" (2D plate), "2DF" (2D plate with flange), "3DF" (3D Shape with flange), "3DS" (3D shape with stiffeners).
+Minsize -> format dimension x dimension units(mm,cm,m) ie: 5x5m (or NL for no limit). 
+MaxSize -> ".
+MinThickness -> ".
+MaxThickness -> ".
+SurfaceFinish -> H, M, L
+MinBendRadious ->H, M, L, VL (<0.5mm, 0.5-1.5mm, >1.5mm, >2mm), there should be options to choose "or higher" or "or lower".
+Warpage -> VH, H, M, L, VL
+StressingPrecision -> H, M, L
+TensileStiffness -> number
+TensileStrength -> number
+PlayAngle -> H, M, L
+ThicknessTailoring -> CT, H, M, L
+AnnualProductionVolume -> number
+MatchedSurface -> Y/N
+EmbeddedInserts ->  Y/N
+CoCuring ->  Y/N
+Sbeading ->  Y/N
+Sblades -> Y/N
+Shats ->  Y/N
+Sfoam ->  Y/N
+,Shoneycomb ->  Y/N
+SBestSuited -> Sbeading, Sblades, Shats, Sfoam, Shoneycomb (one of them).
+Discarded -> Additional information of why the MF has been discarded, Will shown the information stored in the step where the MF was removed. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+MaterialList.insert({
+    MF: "G-woven",
+    Procces: "PrepregAutoclaveHandLayUp",
+    Shape: [ "Panels", "Stiffeners", "Tubes" ],
+    Extrashape:["2D", "2DF"],
+    MinSize:"50x50mm",
+    MaxSize:"5x2m",
+    MinThickness:"0.5mm",
+    MaxThickness:"NL",
+    SurfaceFinish:"H",
+    MinBendRadious:"VL",
+    Warpage:"H",
+    StressingPrecision:"H",
+    TensileStiffness:140,
+    TensileStrength:2000,
+    PlayAngle:"H",
+    ThicknessTailoring:"H",
+    AnnualProductionVolume:300,
+    MatchedSurface:"N",
+    EmbeddedInserts:"Y",
+    CoCuring:"Y",
+    Sbeading:"N",
+    Sblades:"Y",
+    Shats:"Y",
+    Sfoam:"Y",
+    Shoneycomb:"Y",
+    SBestSuited: "",
+    Discarded: 	[{step1 : "1"},{step2 : "2"},{step3 : "3"},{step4 : "4"},{step5 : "5"},{step6 : "6"},{step7 : "7"},{step8 : "8"},{step9 : "9"},{step10 : "10"},{step11 : "11"},{step12 : "12"},{step13 : "13"},{step14 : "14"},{step15 : "15"},{step16 : "16"},{step1 : "17"},{step18 : "18"},{step19 : "19"},{step20 : "20"},{step19 : "21"},{step19 : "22"},{step23 : "23"},{step24: "24"},{step25: "25"},{step26 : "26"},{step27 : "27"},{step28 : "28"},{step29 : "29"},{step30 : "30"},{step31 : "31"},{step32 : "32"},{step33 : "33"}]
+
+});
+
+MaterialList.insert({
+    MF: "Woven",
+    Procces: "PrepregAutoclaveHandLayUp",
+    Shape: [ "Shells", "Panels", "Frames", "Stiffeners", "Tubes", "Tanks" ],
+    Extrashape:["2D", "2DF", "3DF", "3DS"],
+    MinSize:"50x50mm",
+    MaxSize:"5x2m",
+    MinThickness:"0.5mm",
+    MaxThickness:"NL",
+    SurfaceFinish:"H",
+    MinBendRadious:"L",
+    Warpage:"H",
+    StressingPrecision:"M",
+    TensileStiffness:60,
+    TensileStrength:600,
+    PlayAngle:"M",
+    ThicknessTailoring:"M",
+    AnnualProductionVolume:300,
+    MatchedSurface:"N",
+    EmbeddedInserts:"Y",
+    CoCuring:"Y",
+    Sbeading:"Y",
+    Sblades:"Y",
+    Shats:"Y",
+    Sfoam:"Y",
+    Shoneycomb:"Y",
+    SBestSuited: "",
+  	Discarded: 	[{step1 : "1"},{step2 : "2"},{step3 : "3"},{step4 : "4"},{step5 : "5"},{step6 : "6"},{step7 : "7"},{step8 : "8"},{step9 : "9"},{step10 : "10"},{step11 : "11"},{step12 : "12"},{step13 : "13"},{step14 : "14"},{step15 : "15"},{step16 : "16"},{step1 : "17"},{step18 : "18"},{step19 : "19"},{step20 : "20"},{step19 : "21"},{step19 : "22"},{step23 : "23"},{step24: "24"},{step25: "25"},{step26 : "26"},{step27 : "27"},{step28 : "28"},{step29 : "29"},{step30 : "30"},{step31 : "31"},{step32 : "32"},{step33 : "33"}]    
+
+
+});
+
+MaterialList.insert({
+    MF: "G-woven",
+    Procces: "PrepregAutoclaveHandLayUp",
+    Shape: [ "Shells", "Panels", "Frames", "Stiffeners", "Tubes"],
+    Extrashape:["2D", "2DF", "3DF", "3DS"],
+    MinSize:"50x50mm",
+    MaxSize:"5x2m",
+    MinThickness:"0.5mm",
+    MaxThickness:"NL",
+    SurfaceFinish:"H",
+    MinBendRadious:"L",
+    Warpage:"M",
+    StressingPrecision:"L",
+    TensileStiffness:18,
+    TensileStrength:320,
+    PlayAngle:"M",
+    ThicknessTailoring:"M",
+    AnnualProductionVolume:300,
+    MatchedSurface:"N",
+    EmbeddedInserts:"Y",
+    CoCuring:"Y",
+    Sbeading:"Y",
+    Sblades:"Y",
+    Shats:"Y",
+    Sfoam:"Y",
+    Shoneycomb:"Y",
+    SBestSuited: "",
+    Discarded: 	[{step1 : "1"},{step2 : "2"},{step3 : "3"},{step4 : "4"},{step5 : "5"},{step6 : "6"},{step7 : "7"},{step8 : "8"},{step9 : "9"},{step10 : "10"},{step11 : "11"},{step12 : "12"},{step13 : "13"},{step14 : "14"},{step15 : "15"},{step16 : "16"},{step1 : "17"},{step18 : "18"},{step19 : "19"},{step20 : "20"},{step19 : "21"},{step19 : "22"},{step23 : "23"},{step24: "24"},{step25: "25"},{step26 : "26"},{step27 : "27"},{step28 : "28"},{step29 : "29"},{step30 : "30"},{step31 : "31"},{step32 : "32"},{step33 : "33"}]
+
+});
+

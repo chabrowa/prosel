@@ -19,52 +19,51 @@ Template.steps.helpers({
 
 Template.steps.events({
   "submit .step1": function (event) {
-    // This function is called when the search form is submitted
-    event.preventDefault();
-    	
+    event.preventDefault(); 	
     var text = event.target.shape.value;
-
     var aux = MaterialList.find()
     aux.forEach(function(entry) {
     	if(searchStringInArray(text,entry.Shape)==1)
     		chosen.insert(entry);
-    	else discarded.insert(entry);
-    	
-});
-   
+    	else discarded.insert(entry);    	
+    });  
   },
 
   "submit .step2": function (event) {
-    // This function is called when the search form is submitted
     event.preventDefault();
-
     var text = event.target.ExtraShape.value;
-
     var aux = chosen.find()
     aux.forEach(function(entry) {
     	if(searchStringInArray(text,entry.Extrashape) == -1){
     		chosen.remove(entry);
     		discarded.insert(entry);
     	}
-});
-
+    });
   },
-    "submit .step3": function (event) {
-    // This function is called when the search form is submitted
-    event.preventDefault();
-        console.log(chosen.find().fetch());
 
+    "submit .step3": function (event) {
+    event.preventDefault();
     var dim1 = event.target.maxSize1.value;
     var dim2 = event.target.maxSize2.value; 
-
     var aux = chosen.find()
     aux.forEach(function(entry) {
-        if( dim1 > entry.MaxSize[0]  || dim2 < entry.MaxSize[1] )
-           chosen.remove(entry);
-        
-});
-    console.log(chosen.find().fetch());
+        if( dim1 > entry.MaxSize[0]  || dim2 > entry.MaxSize[1] )
+           chosen.remove(entry);        
+    });
   },
+
+    "submit .step4": function (event) {
+    // This function is called when the search form is submitted
+    event.preventDefault();
+    var dim1 = event.target.minSize1.value;
+    var dim2 = event.target.minSize2.value; 
+    var aux = chosen.find()
+    aux.forEach(function(entry) {
+        if( dim1 < entry.MinSize[0]  || dim2 < entry.MinSize[1] )
+           chosen.remove(entry);
+    });
+  },
+  
 });
 /*
 console.log("test");

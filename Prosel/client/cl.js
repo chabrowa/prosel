@@ -24,7 +24,7 @@ Template.steps.events({
     	
     var text = event.target.shape.value;
 
-    aux = MaterialList.find()
+    var aux = MaterialList.find()
     aux.forEach(function(entry) {
     	if(searchStringInArray(text,entry.Shape)==1)
     		chosen.insert(entry);
@@ -39,18 +39,32 @@ Template.steps.events({
     event.preventDefault();
 
     var text = event.target.ExtraShape.value;
-    	       	console.log(chosen.find().fetch());
 
-    aux = chosen.find()
+    var aux = chosen.find()
     aux.forEach(function(entry) {
     	if(searchStringInArray(text,entry.Extrashape) == -1){
     		chosen.remove(entry);
     		discarded.insert(entry);
     	}
 });
-       	console.log(chosen.find().fetch());
 
-  }
+  },
+    "submit .step3": function (event) {
+    // This function is called when the search form is submitted
+    event.preventDefault();
+        console.log(chosen.find().fetch());
+
+    var dim1 = event.target.maxSize1.value;
+    var dim2 = event.target.maxSize2.value; 
+
+    var aux = chosen.find()
+    aux.forEach(function(entry) {
+        if( dim1 > entry.MaxSize[0]  || dim2 < entry.MaxSize[1] )
+           chosen.remove(entry);
+        
+});
+    console.log(chosen.find().fetch());
+  },
 });
 /*
 console.log("test");

@@ -5,7 +5,7 @@ MF-> Mat form (name of the material).
 Procces -> Procces (Several materials will have the same procces, acording to the excel).
 Shape -> It can be one  of these: "Shells", "Panels", "Frames", "Stiffeners", "Tubes", "Tanks", "Multi".
 ExtraShape -> It can be of these: "2D" (2D plate), "2DF" (2D plate with flange), "3DF" (3D Shape with flange), "3DS" (3D shape with stiffeners).
-Minsize -> format dimension x dimension units(mm,cm,m) ie: 5x5m (or NL for no limit). 
+Minsize -> format [dimension, dimension] (mm) ie: [5, 5] (or NL for no limit). 
 MaxSize -> ".
 MinThickness -> ".
 MaxThickness -> ".
@@ -49,9 +49,9 @@ MaterialList.insert({
     Procces: "PrepregAutoclaveHandLayUp",
     Shape: [ "Panels", "Stiffeners", "Tubes" ],
     Extrashape:["2D", "2DF"],
-    MinSize:"50x50mm",
-    MaxSize:"5x2m",
-    MinThickness:"0.5mm",
+    MinSize: [50, 50],
+    MaxSize: [5000, 2000],
+    MinThickness: 0.5,
     MaxThickness:"NL",
     SurfaceFinish:"H",
     MinBendRadious:"VL",
@@ -80,9 +80,9 @@ MaterialList.insert({
     Procces: "PrepregAutoclaveHandLayUp",
     Shape: [ "Shells", "Panels", "Frames", "Stiffeners", "Tubes", "Tanks" ],
     Extrashape:["2D", "2DF", "3DF", "3DS"],
-    MinSize:"50x50mm",
-    MaxSize:"5x2m",
-    MinThickness:"0.5mm",
+    MinSize: [50, 50],
+    MaxSize: [5000, 2000],
+    MinThickness: 0.5,
     MaxThickness:"NL",
     SurfaceFinish:"H",
     MinBendRadious:"L",
@@ -112,9 +112,9 @@ MaterialList.insert({
     Procces: "PrepregAutoclaveHandLayUp",
     Shape: [ "Shells", "Panels", "Frames", "Stiffeners", "Tubes"],
     Extrashape:["2D", "2DF", "3DF", "3DS"],
-    MinSize:"50x50mm",
-    MaxSize:"5x2m",
-    MinThickness:"0.5mm",
+    MinSize: [50, 50],
+    MaxSize: [5000, 2000],
+    MinThickness: 0.5,
     MaxThickness:"NL",
     SurfaceFinish:"H",
     MinBendRadious:"L",

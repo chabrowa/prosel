@@ -53,7 +53,6 @@ Template.steps.events({
   },
 
     "submit .step4": function (event) {
-    // This function is called when the search form is submitted
     event.preventDefault();
     var dim1 = event.target.minSize1.value;
     var dim2 = event.target.minSize2.value; 
@@ -63,7 +62,31 @@ Template.steps.events({
            chosen.remove(entry);
     });
   },
-  
+
+    "submit .step5": function (event) {
+    event.preventDefault();
+    var maxThickness = event.target.MaxThickness.value;
+    var aux = chosen.find()
+    aux.forEach(function(entry) {
+        if(entry.maxThickness != "NL"){
+        if( maxThickness > entry.MaxThickness)
+           chosen.remove(entry);
+       }
+    });
+    console.log(chosen.find().fetch());
+  },  
+
+    "submit .step6": function (event) {
+    event.preventDefault();
+    var minThickness = event.target.MinThickness.value;
+    var aux = chosen.find()
+    aux.forEach(function(entry) {
+        if( minThickness < entry.MinThickness)
+           chosen.remove(entry);
+    });
+    console.log(chosen.find().fetch());
+  }  
+
 });
 /*
 console.log("test");

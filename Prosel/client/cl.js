@@ -47,8 +47,10 @@ Template.steps.events({
     var dim2 = event.target.maxSize2.value; 
     var aux = chosen.find()
     aux.forEach(function(entry) {
-        if( dim1 > entry.MaxSize[0]  || dim2 > entry.MaxSize[1] )
-           chosen.remove(entry);        
+        if( dim1 > entry.MaxSize[0]  || dim2 > entry.MaxSize[1] ){
+           chosen.remove(entry);  
+           discarded.insert(entry);   
+        }
     });
   },
 
@@ -58,8 +60,10 @@ Template.steps.events({
     var dim2 = event.target.minSize2.value; 
     var aux = chosen.find()
     aux.forEach(function(entry) {
-        if( dim1 < entry.MinSize[0]  || dim2 < entry.MinSize[1] )
+        if( dim1 < entry.MinSize[0]  || dim2 < entry.MinSize[1] ){
            chosen.remove(entry);
+           discarded.insert(entry);
+        }
     });
   },
 
@@ -69,11 +73,12 @@ Template.steps.events({
     var aux = chosen.find()
     aux.forEach(function(entry) {
         if(entry.maxThickness != "NL"){
-        if( maxThickness > entry.MaxThickness)
+        if( maxThickness > entry.MaxThickness){
            chosen.remove(entry);
+           discarded.insert(entry);
+        }
        }
     });
-    console.log(chosen.find().fetch());
   },  
 
     "submit .step6": function (event) {
@@ -81,11 +86,32 @@ Template.steps.events({
     var minThickness = event.target.MinThickness.value;
     var aux = chosen.find()
     aux.forEach(function(entry) {
-        if( minThickness < entry.MinThickness)
+        if( minThickness < entry.MinThickness){
            chosen.remove(entry);
+           discarded.insert(entry);
+        }
     });
-    console.log(chosen.find().fetch());
-  }  
+  },
+
+    "submit .step7": function (event) {
+    event.preventDefault();  
+    var SFvalue = event.target.SurfaceFinish.value;
+    var higher = event.target.orHigher.checked;
+    var aux = chosen.find()
+    aux.forEach(function(entry) {
+        if(higher){ 
+            if( entry.SurfaceFinish < SFvalue){
+             chosen.remove(entry);
+             discarded.insert(entry);
+            } 
+        }else{
+                if( entry.SurfaceFinish != SFvalue ){
+                                 chosen.remove(entry);
+                                 discarded.insert(entry);
+                }
+            }
+    });
+  },     
 
 });
 /*

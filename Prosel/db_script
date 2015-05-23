@@ -9,7 +9,7 @@ Minsize -> format [dimension, dimension] (mm) ie: [5, 5] (or NL for no limit).
 MaxSize -> ".
 MinThickness -> ".
 MaxThickness -> ".
-SurfaceFinish -> H, M, L
+SurfaceFinish -> 3(H), 2(M), 1(L) + checkbox, if it is check the user can choose "or higher" i.e: Medium(or higher = Medium or high).
 MinBendRadious ->H, M, L, VL (<0.5mm, 0.5-1.5mm, >1.5mm, >2mm), there should be options to choose "or higher" or "or lower".
 Warpage -> VH, H, M, L, VL
 StressingPrecision -> H, M, L
@@ -53,7 +53,7 @@ MaterialList.insert({
     MaxSize: [5000, 2000],
     MinThickness: 0.5,
     MaxThickness:"NL",
-    SurfaceFinish:"H",
+    SurfaceFinish: 3,
     MinBendRadious:"VL",
     Warpage:"H",
     StressingPrecision:"H",
@@ -84,7 +84,7 @@ MaterialList.insert({
     MaxSize: [5000, 2000],
     MinThickness: 0.5,
     MaxThickness:"NL",
-    SurfaceFinish:"H",
+    SurfaceFinish: 3,
     MinBendRadious:"L",
     Warpage:"H",
     StressingPrecision:"M",
@@ -116,7 +116,7 @@ MaterialList.insert({
     MaxSize: [5000, 2000],
     MinThickness: 0.5,
     MaxThickness:"NL",
-    SurfaceFinish:"H",
+    SurfaceFinish: 3,
     MinBendRadious:"L",
     Warpage:"M",
     StressingPrecision:"L",

@@ -96,7 +96,7 @@ Template.steps.events({
     "submit .step7": function (event) {
     event.preventDefault();  
     var SFvalue = event.target.SurfaceFinish.value;
-    var higher = event.target.orHigher.checked;
+    var higher = event.target.SForHigher.checked;
     var aux = chosen.find()
     aux.forEach(function(entry) {
         if(higher){ 
@@ -111,15 +111,51 @@ Template.steps.events({
                 }
             }
     });
-  },     
+  },  
+
+    "submit .step8": function (event) {
+    event.preventDefault();  
+    var MBRvalue = event.target.MinBendRadious.value;
+    var higher = event.target.MBRorHigher.checked;
+    var aux = chosen.find()
+    aux.forEach(function(entry) {
+        if(higher){ 
+            if( entry.MinBendRadious > MBRvalue){
+             chosen.remove(entry);
+             discarded.insert(entry);
+            } 
+        }else{
+                if( entry.MinBendRadious != MBRvalue ){
+                                 chosen.remove(entry);
+                                 discarded.insert(entry);
+                }
+            }
+    });
+  },   
+
+    "submit .step9": function (event) {
+    event.preventDefault();  
+    var Wvalue = event.target.Warpage.value;
+    var higher = event.target.WorHigher.checked;
+    var aux = chosen.find()
+    aux.forEach(function(entry) {
+        if(higher){ 
+            if( entry.Warpage < Wvalue){
+             chosen.remove(entry);
+             discarded.insert(entry);
+            } 
+        }else{
+                if( entry.Warpage != Wvalue ){
+                                 chosen.remove(entry);
+                                 discarded.insert(entry);
+                }
+            }
+    }); 
+  },
+  //step10 not yet implemented  
 
 });
-/*
-console.log("test");
 
-aux.forEach(function (mat) {
-            console.log("asdf");        
-          }); */
 function searchStringInArray (str, strArray) {
     for (var j=0; j<strArray.length; j++) {
         if (strArray[j].match(str)) return 1;

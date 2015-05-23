@@ -74,8 +74,33 @@ x
     <option value="2">Medium</option>
     <option value="3">High</option>
   </select>
-  <input type="checkbox" id="orHigher">Or higher
-    <input type="submit">
+  <input type="checkbox" id="SForHigher">Or higher
+  <input type="submit">
 </form>
 
+<form class="step8">
+  <label for="MinBendRadious">Min Bend Radious: </label> 
+  <select id="MinBendRadious">
+    <option value="1">High (&lt;0.5mm) </option>
+    <option value="2">Medium (&lt;1.5mm) </option>
+    <option value="3">Low (&lt;2mm) </option>
+    <option value="4">Very Low (&gt;2mm) </option>    
+  </select>
+  <input type="checkbox" id="MBRorHigher">Or higher
+<input type="submit">
+</form>
+
+<form class="step9">
+  <label for="Warpage">Warpage: </label> 
+  <select id="Warpage">
+    <option value="1">Very Low  </option>
+    <option value="2">Low </option>
+    <option value="3">Medium  </option>
+    <option value="4">High </option>    
+    <option value="5">Very High </option>    
+  </select>
+  <input type="checkbox" id="WorHigher">Or higher
+<input type="submit">
+</form>
+<!-- step10 not yet implemented -->
 </template>

@@ -36,45 +36,42 @@
 
 
 <form class="step3">
-<label>Max Size: </label> 
-<input type="text" id="maxSize1">
-x
-<input type="text" id="maxSize2">
-<label>mm</label>
-<input type="submit">
+ <label>Max Size: </label> 
+ <input type="text" id="maxSize1">
+ x
+ <input type="text" id="maxSize2">
+ <label>mm</label>
+ <input type="submit">
 </form>
 
 <form class="step4">
-<label>Min Size: </label> 
-<input type="text" id="minSize1">
-x
-<input type="text" id="minSize2">
-<label>mm</label>
-<input type="submit">
+ <label>Min Size: </label> 
+ <input type="text" id="minSize1">
+ x
+ <input type="text" id="minSize2">
+ <label>mm</label>
+ <input type="submit">
 </form>
 
 <form class="step5">
-<label for="MaxThickness">Max Thickness: </label> 
-<input type="text" id="MaxThickness">
-<label>mm</label>
-<input type="submit">
+ <label for="MaxThickness">Max Thickness: </label> 
+ <input type="text" id="MaxThickness">
+ <label>mm</label>
+ <input type="submit">
 </form>
 
 <form class="step6">
-<label for="MinThickness">Min Thickness: </label> 
-<input type="text" id="MinThickness">
-<label>mm</label>
-<input type="submit">
+ <label for="MinThickness">Min Thickness: </label> 
+ <input type="text" id="MinThickness">
+ <label>mm</label>
+ <input type="submit">
 </form>
 
 <form class="step7">
-  <label for="SurfaceFinish">Surface Finish: </label> 
-  <select id="SurfaceFinish">
-    <option value="1">Low</option>
-    <option value="2">Medium</option>
-    <option value="3">High</option>
-  </select>
-  <input type="checkbox" id="SForHigher">Or higher
+  <label >Surface Finish: </label> 
+  <input type="checkbox" value="1">Low
+  <input type="checkbox" value="2">Medium
+  <input type="checkbox" value="3">High
   <input type="submit">
 </form>
 
@@ -91,16 +88,43 @@ x
 </form>
 
 <form class="step9">
-  <label for="Warpage">Warpage: </label> 
-  <select id="Warpage">
-    <option value="1">Very Low  </option>
-    <option value="2">Low </option>
-    <option value="3">Medium  </option>
-    <option value="4">High </option>    
-    <option value="5">Very High </option>    
-  </select>
-  <input type="checkbox" id="WorHigher">Or higher
+  <label>Warpage: </label> 
+  <input type="checkbox" value="1">Very Low 
+  <input type="checkbox" value="2">Low
+  <input type="checkbox" value="3">Medium  
+  <input type="checkbox" value="4">High   
+  <input type="checkbox" value="5">Very High    
 <input type="submit">
 </form>
 <!-- step10 not yet implemented -->
+
+<form class="step11">
+  <label>Stressing Precision</label>
+  <input type="checkbox" value="1"> V - Suited to precisely defined loading 
+  <input type="checkbox" value="2"> L - Suited to general uncertain loading 
+  <input type="checkbox" value="3"> M - Suited to either
+  <input type="checkbox" value="4"> H - Suited to either 
+  <input type="submit">
+</form>
+
+<form class="step12">
+ <label for="TensileStiffness">Tensile Stiffness above(GPA): </label> 
+ <input type="text" id="TensileStiffness">
+  <input type="submit">
+</form>
+
+<form class="step13">
+  <label for="TensileStrength">Tensile Strength above(MPA): </label> 
+  <input type="text" id="TensileStrength">
+  <input type="submit">
+</form>
+
+<form class="step14">
+  <label>Ply Angle:</label>
+  <input type="checkbox" value="1">Low
+  <input type="checkbox" value="2">Medium
+  <input type="checkbox" value="3">High  
+  <input type="submit">
+</form>
+
 </template>

@@ -9,13 +9,13 @@ Minsize -> format [dimension, dimension] (mm) ie: [5, 5] (or NL for no limit).
 MaxSize -> ".
 MinThickness -> ".
 MaxThickness -> ".
-SurfaceFinish -> 3(H), 2(M), 1(L) + checkbox, if it is check the user can choose "or higher" i.e: Medium(or higher = Medium or high).
+SurfaceFinish -> 3(H), 2(M), 1(L) 
 MinBendRadious ->H(1), M(2), L(3), VL(4) (<0.5mm, 0.5-1.5mm, >1.5mm, >2mm) 
 Warpage -> VH(5), H(4), M(3), L(2), VL(1)
-StressingPrecision -> H, M, L
+StressingPrecision -> H(4), M(3), L(2), V(1)
 TensileStiffness -> number
 TensileStrength -> number
-PlayAngle -> H, M, L
+PlyAngle -> H(3), M(2), L(1)
 ThicknessTailoring -> CT, H, M, L
 AnnualProductionVolume -> number
 MatchedSurface -> Y/N
@@ -45,7 +45,7 @@ Discarded -> Additional information of why the MF has been discarded, Will shown
 
 
 MaterialList.insert({
-    MF: "G-woven",
+    MF: "UDTape",
     Procces: "PrepregAutoclaveHandLayUp",
     Shape: [ "Panels", "Stiffeners", "Tubes" ],
     Extrashape:["2D", "2DF"],
@@ -56,10 +56,10 @@ MaterialList.insert({
     SurfaceFinish: 3,
     MinBendRadious: 4,
     Warpage: 4,
-    StressingPrecision:"H",
+    StressingPrecision: 4,
     TensileStiffness:140,
     TensileStrength:2000,
-    PlayAngle:"H",
+    PlyAngle: 3,
     ThicknessTailoring:"H",
     AnnualProductionVolume:300,
     MatchedSurface:"N",
@@ -85,12 +85,12 @@ MaterialList.insert({
     MinThickness: 0.5,
     MaxThickness:"NL",
     SurfaceFinish: 3,
-    MinBendRadious:"3",
+    MinBendRadious: 3,
     Warpage: 4,
-    StressingPrecision:"M",
+    StressingPrecision: 3,
     TensileStiffness:60,
     TensileStrength:600,
-    PlayAngle:"M",
+    PlyAngle: 2,
     ThicknessTailoring:"M",
     AnnualProductionVolume:300,
     MatchedSurface:"N",
@@ -117,12 +117,12 @@ MaterialList.insert({
     MinThickness: 0.5,
     MaxThickness:"NL",
     SurfaceFinish: 3,
-    MinBendRadious:"3",
+    MinBendRadious: 3,
     Warpage: 3,
-    StressingPrecision:"L",
+    StressingPrecision: 2,
     TensileStiffness:18,
     TensileStrength:320,
-    PlayAngle:"M",
+    PlyAngle: 2,
     ThicknessTailoring:"M",
     AnnualProductionVolume:300,
     MatchedSurface:"N",

@@ -93,23 +93,17 @@ Template.steps.events({
     });
   },
 
-    "submit .step7": function (event) {
+    "submit .step7": function (event, template) {
     event.preventDefault();  
-    var SFvalue = event.target.SurfaceFinish.value;
-    var higher = event.target.SForHigher.checked;
+    var selected = template.findAll( ".step7 input[type=checkbox]:checked");  
+    var array = mapItems(selected);
     var aux = chosen.find()
     aux.forEach(function(entry) {
-        if(higher){ 
-            if( entry.SurfaceFinish < SFvalue){
+        if(searchStringInArray(entry.SurfaceFinish, array) == -1){
              chosen.remove(entry);
              discarded.insert(entry);
             } 
-        }else{
-                if( entry.SurfaceFinish != SFvalue ){
-                                 chosen.remove(entry);
-                                 discarded.insert(entry);
-                }
-            }
+
     });
   },  
 
@@ -133,26 +127,73 @@ Template.steps.events({
     });
   },   
 
-    "submit .step9": function (event) {
+    "submit .step9": function (event, template) {
     event.preventDefault();  
-    var Wvalue = event.target.Warpage.value;
-    var higher = event.target.WorHigher.checked;
+    var selected = template.findAll( ".step9 input[type=checkbox]:checked");  
+    var array = mapItems(selected);
     var aux = chosen.find()
     aux.forEach(function(entry) {
-        if(higher){ 
-            if( entry.Warpage < Wvalue){
+        if(searchStringInArray(entry.Warpage, array) == -1){
              chosen.remove(entry);
              discarded.insert(entry);
             } 
-        }else{
-                if( entry.Warpage != Wvalue ){
-                                 chosen.remove(entry);
-                                 discarded.insert(entry);
-                }
-            }
-    }); 
-  },
+
+    });
+  },  
+
   //step10 not yet implemented  
+
+    "submit .step11" : function (event, template) {
+    event.preventDefault();
+    var selected = template.findAll( ".step11 input[type=checkbox]:checked");  
+    var array = mapItems(selected);
+    var aux = chosen.find()
+    aux.forEach(function(entry) {
+        if(searchStringInArray(entry.StressingPrecision, array) == -1){
+             chosen.remove(entry);
+             discarded.insert(entry);
+            } 
+
+    }); console.log(chosen.find().fetch());
+},  
+
+    "submit .step12": function (event) {
+    event.preventDefault();
+    var TensileStiffness = event.target.TensileStiffness.value;
+    var aux = chosen.find()
+    aux.forEach(function(entry) {
+        if( TensileStiffness > entry.TensileStiffness){
+           chosen.remove(entry);
+           discarded.insert(entry);
+        }
+    });
+  },
+
+    "submit .step13": function (event) {
+    event.preventDefault();
+    var TensileStrength = event.target.TensileStrength.value;
+    var aux = chosen.find()
+    aux.forEach(function(entry) {
+        if( TensileStrength > entry.TensileStrength){
+           chosen.remove(entry);
+           discarded.insert(entry);
+        }
+    }); 
+  }, 
+
+    "submit .step14" : function (event, template) {
+    event.preventDefault();
+    var selected = template.findAll( ".step14 input[type=checkbox]:checked");  
+    var array = mapItems(selected);
+    var aux = chosen.find()
+    aux.forEach(function(entry) {
+        if(searchStringInArray(entry.PlyAngle, array) == -1){
+             chosen.remove(entry);
+             discarded.insert(entry);
+            } 
+
+    }); console.log(chosen.find().fetch());
+},
 
 });
 
@@ -162,3 +203,11 @@ function searchStringInArray (str, strArray) {
     }
     return -1;
 }
+
+function mapItems(selected){
+    var array = _.map(selected, function(item) {
+     return item.defaultValue;
+  });
+    return array;
+}
+

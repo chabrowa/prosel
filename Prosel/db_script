@@ -16,7 +16,7 @@ StressingPrecision -> H(4), M(3), L(2), V(1)
 TensileStiffness -> number
 TensileStrength -> number
 PlyAngle -> H(3), M(2), L(1)
-ThicknessTailoring -> CT, H, M, L
+ThicknessTailoring -> Array [H(4), M(3), L(2), CT(1)]
 AnnualProductionVolume -> number
 MatchedSurface -> Y/N
 EmbeddedInserts ->  Y/N
@@ -28,19 +28,6 @@ Sfoam ->  Y/N
 ,Shoneycomb ->  Y/N
 SBestSuited -> Sbeading, Sblades, Shats, Sfoam, Shoneycomb (one of them).
 Discarded -> Additional information of why the MF has been discarded, Will shown the information stored in the step where the MF was removed. 
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -60,7 +47,7 @@ MaterialList.insert({
     TensileStiffness:140,
     TensileStrength:2000,
     PlyAngle: 3,
-    ThicknessTailoring:"H",
+    ThicknessTailoring: [4],
     AnnualProductionVolume:300,
     MatchedSurface:"N",
     EmbeddedInserts:"Y",
@@ -91,7 +78,7 @@ MaterialList.insert({
     TensileStiffness:60,
     TensileStrength:600,
     PlyAngle: 2,
-    ThicknessTailoring:"M",
+    ThicknessTailoring: [3],
     AnnualProductionVolume:300,
     MatchedSurface:"N",
     EmbeddedInserts:"Y",
@@ -123,7 +110,7 @@ MaterialList.insert({
     TensileStiffness:18,
     TensileStrength:320,
     PlyAngle: 2,
-    ThicknessTailoring:"M",
+    ThicknessTailoring: [3],
     AnnualProductionVolume:300,
     MatchedSurface:"N",
     EmbeddedInserts:"Y",

@@ -184,8 +184,8 @@ Template.steps.events({
     "submit .step14" : function (event, template) {
     event.preventDefault();
     var selected = template.findAll( ".step14 input[type=checkbox]:checked");  
-    var array = mapItems(selected);
-    var aux = chosen.find()
+    var array = mapItems(selected); 
+    var aux = chosen.find();
     aux.forEach(function(entry) {
         if(searchStringInArray(entry.PlyAngle, array) == -1){
              chosen.remove(entry);
@@ -193,6 +193,24 @@ Template.steps.events({
             } 
 
     }); console.log(chosen.find().fetch());
+},
+
+    "submit .step15" : function (event, template) {
+    event.preventDefault();
+    var selected = template.findAll( ".step15 input[type=checkbox]:checked");  
+    var array = mapItems(selected); 
+    var aux = chosen.find();
+    aux.forEach(function(collectionElement) {
+        var aux2 = collectionElement.ThicknessTailoring; 
+        var found = false;
+        aux2.forEach(function(entry) { 
+            if(searchStringInArray(entry, array) == 1){ found = true; return }   
+            if(!found){
+             chosen.remove(collectionElement);
+             discarded.insert(collectionElement);
+            } 
+        });
+    });
 },
 
 });

@@ -213,6 +213,130 @@ Template.steps.events({
     });
 },
 
+    "submit .step16": function (event) {
+    event.preventDefault();
+    var Aprod = event.target.Aprod.value;
+    var aux = chosen.find();
+    aux.forEach(function(entry) {
+        if( Aprod > entry.AnnualProductionVolume){
+           chosen.remove(entry);
+           discarded.insert(entry);
+        }
+    }); console.log(chosen.find().fetch());
+  },
+
+    "submit .step17": function(event){
+    event.preventDefault();
+    var MS = event.target.MS.checked;
+    if(MS){ 
+    var aux = chosen.find();
+    aux.forEach(function(entry) {
+        if(entry.MatchedSurface == "N"){
+           chosen.remove(entry);
+           discarded.insert(entry);
+        }
+    });
+    } console.log(chosen.find().fetch());
+    },
+
+    "submit .step18": function(event){
+    event.preventDefault();
+    var EI = event.target.EI.checked;
+    if(EI){
+    var aux = chosen.find();
+    aux.forEach(function(entry) {
+        if( entry.EmbeddedInserts == "N"){
+           chosen.remove(entry);
+           discarded.insert(entry);
+        }
+    });
+    } console.log(chosen.find().fetch());
+    },
+
+    "submit .step19": function(event){
+    event.preventDefault();
+    var CC = event.target.CC.checked;
+    if(CC){
+    var aux = chosen.find();
+    aux.forEach(function(entry) {
+        if(entry.CoCuring == "N"){
+           chosen.remove(entry);
+           discarded.insert(entry);
+        }
+    });
+    } console.log(chosen.find().fetch());
+    },
+
+    "submit .step20a": function(event){
+    event.preventDefault();
+    var Sbeading = event.target.Sbeading.checked;
+    if(Sbeading){
+    var aux = chosen.find();
+    aux.forEach(function(entry) {
+        if(entry.Sbeading == "N"){
+           chosen.remove(entry);
+           discarded.insert(entry);
+        }
+    });
+    } console.log(chosen.find().fetch());
+    },
+
+    "submit .step20b": function(event){
+    event.preventDefault();
+    var Sblades = event.target.Sblades.checked;
+    if(Sblades){
+    var aux = chosen.find();
+    aux.forEach(function(entry) {
+        if(entry.Sblades == "N"){
+           chosen.remove(entry);
+           discarded.insert(entry);
+        }
+    });
+    } console.log(chosen.find().fetch());
+    },
+
+    "submit .step20c": function(event){
+    event.preventDefault();
+    var Shats = event.target.Shats.checked;
+    if(Shats){
+    var aux = chosen.find();
+    aux.forEach(function(entry) {
+        if(entry.Shats == "N"){
+           chosen.remove(entry);
+           discarded.insert(entry);
+        }
+    });
+    } console.log(chosen.find().fetch());
+    },
+
+    "submit .step20d": function(event){
+    event.preventDefault();
+    var Sfoam = event.target.Sfoam.checked;
+    if(Sfoam){
+    var aux = chosen.find();
+    aux.forEach(function(entry) {
+        if(entry.Sfoam  == "N"){
+           chosen.remove(entry);
+           discarded.insert(entry);
+        }
+    });
+    } console.log(chosen.find().fetch());
+    },   
+
+    "submit .step20e": function(event){
+    event.preventDefault();
+    var Shoneycomb = event.target.Shoneycomb.checked;
+    if(Shoneycomb){
+    var aux = chosen.find();
+    aux.forEach(function(entry) {
+        if(entry.Shoneycomb  == "N"){
+           chosen.remove(entry);
+           discarded.insert(entry);
+        }
+    });
+    } console.log(chosen.find().fetch());
+    },                 
+
 });
 
 function searchStringInArray (str, strArray) {

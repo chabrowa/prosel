@@ -19,14 +19,14 @@ Template.steps.helpers({
 
 Template.steps.events({
   "submit .step1": function (event) {
-    event.preventDefault(); 	
+    event.preventDefault();
     var text = event.target.shape.value;
     var aux = MaterialList.find()
     aux.forEach(function(entry) {
     	if(searchStringInArray(text,entry.Shape)==1)
     		chosen.insert(entry);
-    	else discarded.insert(entry);    	
-    });  
+    	else discarded.insert(entry);
+    });
   },
 
   "submit .step2": function (event) {
@@ -44,12 +44,12 @@ Template.steps.events({
     "submit .step3": function (event) {
     event.preventDefault();
     var dim1 = event.target.maxSize1.value;
-    var dim2 = event.target.maxSize2.value; 
+    var dim2 = event.target.maxSize2.value;
     var aux = chosen.find()
     aux.forEach(function(entry) {
         if( dim1 > entry.MaxSize[0]  || dim2 > entry.MaxSize[1] ){
-           chosen.remove(entry);  
-           discarded.insert(entry);   
+           chosen.remove(entry);
+           discarded.insert(entry);
         }
     });
   },
@@ -57,7 +57,7 @@ Template.steps.events({
     "submit .step4": function (event) {
     event.preventDefault();
     var dim1 = event.target.minSize1.value;
-    var dim2 = event.target.minSize2.value; 
+    var dim2 = event.target.minSize2.value;
     var aux = chosen.find()
     aux.forEach(function(entry) {
         if( dim1 < entry.MinSize[0]  || dim2 < entry.MinSize[1] ){
@@ -79,7 +79,7 @@ Template.steps.events({
         }
        }
     });
-  },  
+  },
 
     "submit .step6": function (event) {
     event.preventDefault();
@@ -94,30 +94,30 @@ Template.steps.events({
   },
 
     "submit .step7": function (event, template) {
-    event.preventDefault();  
-    var selected = template.findAll( ".step7 input[type=checkbox]:checked");  
+    event.preventDefault();
+    var selected = template.findAll( ".step7 input[type=checkbox]:checked");
     var array = mapItems(selected);
     var aux = chosen.find()
     aux.forEach(function(entry) {
         if(searchStringInArray(entry.SurfaceFinish, array) == -1){
              chosen.remove(entry);
              discarded.insert(entry);
-            } 
+            }
 
     });
-  },  
+  },
 
     "submit .step8": function (event) {
-    event.preventDefault();  
+    event.preventDefault();
     var MBRvalue = event.target.MinBendRadious.value;
     var higher = event.target.MBRorHigher.checked;
     var aux = chosen.find()
     aux.forEach(function(entry) {
-        if(higher){ 
+        if(higher){
             if( entry.MinBendRadious > MBRvalue){
              chosen.remove(entry);
              discarded.insert(entry);
-            } 
+            }
         }else{
                 if( entry.MinBendRadious != MBRvalue ){
                                  chosen.remove(entry);
@@ -125,37 +125,37 @@ Template.steps.events({
                 }
             }
     });
-  },   
+  },
 
     "submit .step9": function (event, template) {
-    event.preventDefault();  
-    var selected = template.findAll( ".step9 input[type=checkbox]:checked");  
+    event.preventDefault();
+    var selected = template.findAll( ".step9 input[type=checkbox]:checked");
     var array = mapItems(selected);
     var aux = chosen.find()
     aux.forEach(function(entry) {
         if(searchStringInArray(entry.Warpage, array) == -1){
              chosen.remove(entry);
              discarded.insert(entry);
-            } 
+            }
 
     });
-  },  
+  },
 
-  //step10 not yet implemented  
+  //step10 not yet implemented
 
     "submit .step11" : function (event, template) {
     event.preventDefault();
-    var selected = template.findAll( ".step11 input[type=checkbox]:checked");  
+    var selected = template.findAll( ".step11 input[type=checkbox]:checked");
     var array = mapItems(selected);
     var aux = chosen.find()
     aux.forEach(function(entry) {
         if(searchStringInArray(entry.StressingPrecision, array) == -1){
              chosen.remove(entry);
              discarded.insert(entry);
-            } 
+            }
 
     }); console.log(chosen.find().fetch());
-},  
+},
 
     "submit .step12": function (event) {
     event.preventDefault();
@@ -178,37 +178,37 @@ Template.steps.events({
            chosen.remove(entry);
            discarded.insert(entry);
         }
-    }); 
-  }, 
+    });
+  },
 
     "submit .step14" : function (event, template) {
     event.preventDefault();
-    var selected = template.findAll( ".step14 input[type=checkbox]:checked");  
-    var array = mapItems(selected); 
+    var selected = template.findAll( ".step14 input[type=checkbox]:checked");
+    var array = mapItems(selected);
     var aux = chosen.find();
     aux.forEach(function(entry) {
         if(searchStringInArray(entry.PlyAngle, array) == -1){
              chosen.remove(entry);
              discarded.insert(entry);
-            } 
+            }
 
     }); console.log(chosen.find().fetch());
 },
 
     "submit .step15" : function (event, template) {
     event.preventDefault();
-    var selected = template.findAll( ".step15 input[type=checkbox]:checked");  
-    var array = mapItems(selected); 
+    var selected = template.findAll( ".step15 input[type=checkbox]:checked");
+    var array = mapItems(selected);
     var aux = chosen.find();
     aux.forEach(function(collectionElement) {
-        var aux2 = collectionElement.ThicknessTailoring; 
+        var aux2 = collectionElement.ThicknessTailoring;
         var found = false;
-        aux2.forEach(function(entry) { 
-            if(searchStringInArray(entry, array) == 1){ found = true; return }   
+        aux2.forEach(function(entry) {
+            if(searchStringInArray(entry, array) == 1){ found = true; return }
             if(!found){
              chosen.remove(collectionElement);
              discarded.insert(collectionElement);
-            } 
+            }
         });
     });
 },
@@ -228,7 +228,7 @@ Template.steps.events({
     "submit .step17": function(event){
     event.preventDefault();
     var MS = event.target.MS.checked;
-    if(MS){ 
+    if(MS){
     var aux = chosen.find();
     aux.forEach(function(entry) {
         if(entry.MatchedSurface == "N"){
@@ -321,7 +321,7 @@ Template.steps.events({
         }
     });
     } console.log(chosen.find().fetch());
-    },   
+    },
 
     "submit .step20e": function(event){
     event.preventDefault();
@@ -335,7 +335,7 @@ Template.steps.events({
         }
     });
     } console.log(chosen.find().fetch());
-    },                 
+    },
 
 });
 

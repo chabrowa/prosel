@@ -1,6 +1,8 @@
 @import "variables.less";
 
 .bars-menu {
+  width: 50px;
+  float: left;
   .fa {
       margin-left: 30px;
       margin-top: 15px;
@@ -15,21 +17,27 @@
   }
 }
 
+.logged-header{
+  background: @main-blue;
+  .navbar-nav {
+    margin: 0px;
+  }
+  
+  .navbar-collapse {
+    padding: 0px;
+    background: @main-blue;
+  }
+}
+.newSelectionBtn{
+  float: right;
+  margin-right: 30px;
+  margin-bottom: 30px;
+  #addBtn{
+    background-color: @addnew-red;
+  }
+}
 /***************************************************************/
 
-/*!
- * Start Bootstrap - Simple Sidebar HTML Template (http://startbootstrap.com)
- * Code licensed under the Apache License v2.0.
- * For details, see http://www.apache.org/licenses/LICENSE-2.0.
- */
-
-/* Toggle Styles */
-
-.color-black {
-  background-color: black;
-  border: 0px;
-
-}
 #wrapper {
     padding-left: 0;
     -webkit-transition: all 0.5s ease;
@@ -52,7 +60,7 @@
     height: 100%;
     margin-left: -250px;
     overflow-y: auto;
-    background: #000;
+    background: transparent;
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;

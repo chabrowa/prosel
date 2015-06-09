@@ -1,0 +1,89 @@
+<!-- first -->
+<template name="first">
+  <form class="step1">
+    <label for="shape">Shape: </label>
+    <select id="shape">
+    <option value="Shells">Shells</option>
+    <option value="Panels">Panels</option>
+    <option value="Frames">Frames</option>
+    <option value="Stiffeners">Stiffeners</option>
+    <option value="Tubes">Tubes</option>
+    <option value="Tanks">Cylindrical Pressure</option>
+    <option value="Complex">Complex multi feature</option>
+    <input type="submit">
+  </select>
+  </form>
+
+  <form class="step2">
+  <label for="ExtraShape">Extra Shape: </label>
+  <select id="ExtraShape">
+      {{#each step1}}
+          <option value="{{this}}">{{this}}</option>
+      {{/each}}
+  </select>
+      <input type="submit">
+  </form>
+
+
+  <form class="step3">
+   <label>Max Size: </label>
+   <input type="text" id="maxSize1">
+   x
+   <input type="text" id="maxSize2">
+   <label>mm</label>
+   <input type="submit">
+  </form>
+
+  <form class="step4">
+   <label>Min Size: </label>
+   <input type="text" id="minSize1">
+   x
+   <input type="text" id="minSize2">
+   <label>mm</label>
+   <input type="submit">
+  </form>
+
+  <form class="step5">
+   <label for="MaxThickness">Max Thickness: </label>
+   <input type="text" id="MaxThickness">
+   <label>mm</label>
+   <input type="submit">
+  </form>
+
+  <form class="step6">
+   <label for="MinThickness">Min Thickness: </label>
+   <input type="text" id="MinThickness">
+   <label>mm</label>
+   <input type="submit">
+  </form>
+
+  <form class="step7">
+    <label >Surface Finish: </label>
+    <input type="checkbox" value="1">Low
+    <input type="checkbox" value="2">Medium
+    <input type="checkbox" value="3">High
+    <input type="submit">
+  </form>
+
+  <form class="step8">
+    <label for="MinBendRadious">Min Bend Radious: </label>
+    <select id="MinBendRadious">
+      <option value="1">High (&lt;0.5mm) </option>
+      <option value="2">Medium (&lt;1.5mm) </option>
+      <option value="3">Low (&lt;2mm) </option>
+      <option value="4">Very Low (&gt;2mm) </option>
+    </select>
+    <input type="checkbox" id="MBRorHigher">Or higher
+  <input type="submit">
+  </form>
+
+  <form class="step9">
+    <label>Warpage: </label>
+    <input type="checkbox" value="1">Very Low
+    <input type="checkbox" value="2">Low
+    <input type="checkbox" value="3">Medium
+    <input type="checkbox" value="4">High
+    <input type="checkbox" value="5">Very High
+  <input type="submit">
+  </form>
+</template>

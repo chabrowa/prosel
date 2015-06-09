@@ -1,6 +1,6 @@
-Template.dashboard.events({
+Template.logged.events({
   'click #menu-toggle': function(e) {
-        e.preventDefault();
-        $("#wrapper").toggleClass("toggled");
+    e.preventDefault();
+    $("#wrapper").toggleClass("toggled");
   }
 });

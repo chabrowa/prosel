@@ -1,5 +1,7 @@
 @import "variables.less";
-
+html, body {
+  height: ~'calc(100% - 20px)';
+}
 .bars-menu {
   width: 50px;
   float: left;
@@ -29,9 +31,9 @@
   }
 }
 .newSelectionBtn{
-  float: right;
-  margin-right: 30px;
-  margin-bottom: 30px;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
   #addBtn{
     background-color: @addnew-red;
   }
@@ -45,6 +47,9 @@
     -o-transition: all 0.5s ease;
     transition: all 0.5s ease;
   margin-top: 40px;
+  height: 100%;
+  overflow: hidden;
+  background-color: @light-gray;
 }
 
 #wrapper.toggled {

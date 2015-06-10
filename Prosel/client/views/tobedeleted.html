@@ -1,11 +1,57 @@
 <template name="wzornik">
-<div class="row">
-  <div class="col-nd-12"> top bar</div>
-</div>
-<div class="row">
-  <div class="col-md-3">lewa strona</div>
-  <div class="col-md-6">main content</div>
-  <div class="col-md-3">help</div>
-</div>
+  <nav class="navbar navbar-default logged-navbar">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+          <a href="#menu-toggle" class="color-black" id="menu-toggle"><i class="fa fa-bars"></i></a>
+      </div>
+    </div>
+  </nav>
   
+    <div class="row-fluid">
+      <div class="col-md-2" id="personal-information">
+        <h2>Jon Snow</h2>
+        <h3>mail@gmail.com</h3>
+        <ul>
+          <li>Dashboard</li>
+          <li>Profile</li>
+          <li>log out</li>
+        </ul>
+      </div>
+      <div class="col-md-8" id="basic-container">
+        <paper-material elevation="1" class="material-page selection-content">
+          <div class="col-md-6 selection-left-side">
+            <div class="section-navigation row-fluid">
+              <div class="selectiontabpicker">
+                <input type="radio" name="chosentab" id="part-function" value="first" checked/>
+                <label class="dropdown-content" for="part-function">Part function</label>
+              </div>
+
+              <div class="selectiontabpicker">
+                <input type="radio" name="chosentab" id="weight-saving" value="second"/>
+                <label class="dropdown-content" for="weight-saving">Weight saving</label>
+              </div>
+              <div class="selectiontabpicker">
+                <input type="radio" name="chosentab" id="structural-approach" value="third"/>
+                <label class="dropdown-content" for="structural-approach">Structural approach</label>
+              </div>
+              <div class="selectiontabpicker">
+                <input type="radio" name="chosentab" id="cost-comparison" value="fourth"/>
+                <label class="dropdown-content" for="cost-comparison">Cost comparison</label>
+              </div>
+            </div>
+            <br>
+            <div class="main-selection-section">
+              {{>selectionRouter}}
+            </div>
+          </div>
+
+        </paper-material>
+      </div>
+      <div class="col-md-2" id="help-container-new">
+        <paper-material elevation="1" class="material-page help-content">
+          HELP
+        </paper-material>
+      </div>
+    </div>
 </template>

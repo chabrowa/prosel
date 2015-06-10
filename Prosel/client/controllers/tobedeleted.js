@@ -5,5 +5,16 @@ Template.wzornik.events({
     $('#basic-container').toggleClass('col-md-9 col-md-8');
     $('#help-container-new').toggleClass('col-md-3 col-md-2');
   },
-  'click #part-function':
+  'click #part-function': function(e) {
+    Session.set('selectionPage', 'first');
+  },
+  'click #weight-saving': function(e) {
+    Session.set('selectionPage', 'second');
+  },
+  'click #structural-approach': function(e) {
+    Session.set('selectionPage', 'third');
+  },
+  'click #cost-comparison': function(e) {
+    Session.set('selectionPage', 'fourth');
+  }
 });

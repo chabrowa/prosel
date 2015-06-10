@@ -2,6 +2,7 @@
 
 html, body {
   height: ~'calc(100% - 25px)';
+  font-family: sans-serif;
 }
 .row-fluid div {
   -webkit-transition: width 0.3s ease, margin 0.3s ease, padding 0.3s ease;
@@ -17,9 +18,50 @@ html, body {
 }
 
 #personal-information {
-    height:100%;
-    background-color: @light-gray;
-    //background-color: #A6BFBA;
+  padding: 40px 0px 0px 10px;
+  height:100%;
+  background-color: @light-gray;
+  text-transform: uppercase;
+  color: @text-gray;
+  li {
+    list-style-type: none;
+    font-size: 14px;
+    cursor: pointer;
+    padding: 10px 0px;
+    margin-top: 5px;
+    .fa {
+      padding-right: 10px;
+      padding-left: 10px;
+    }
+    .fa-cubes {
+      color: @brand-danger;
+    }
+    .fa-user {
+      color: @green;
+    }
+    .fa-sign-out {
+      color: @gray-darkest;
+    }
+
+  }
+  li:hover{
+    background-color: @gray-selected;
+  }
+  ul {
+    padding-left: 0px;
+  }
+  #username{
+    padding: 10px 0px 10px 10px;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  #useremail{
+    padding-bottom: 30px;
+    padding-left: 10px;
+    font-size: 14px;
+    border-bottom: 1px solid @line-gray;
+    text-transform: lowercase;
+  }
 }
 
 #basic-container {
@@ -91,4 +133,11 @@ html, body {
 
 .selection-left-side {
   background-color: white;
+}
+
+/********************************************&***/
+
+.help-text {
+ padding: 10px;
+  color: @text-gray;
 }

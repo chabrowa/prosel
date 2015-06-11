@@ -18,11 +18,13 @@ html, body {
 }
 
 #personal-information {
-  padding: 40px 0px 0px 10px;
   height:100%;
   background-color: @light-gray;
-  text-transform: uppercase;
+  font-weight: bold;
   color: @text-gray;
+  .personal-information-inner {
+    padding: 40px 0px 0px 10px;
+  }
   li {
     list-style-type: none;
     font-size: 14px;
@@ -30,19 +32,11 @@ html, body {
     padding: 10px 0px;
     margin-top: 5px;
     .fa {
-      padding-right: 10px;
-      padding-left: 10px;
-    }
-    .fa-cubes {
-      color: @brand-danger;
-    }
-    .fa-user {
-      color: @green;
-    }
-    .fa-sign-out {
-      color: @gray-darkest;
-    }
+      padding-right: 15px;
+      padding-left: 20px;
+      width: 50px;
 
+    }
   }
   li:hover{
     background-color: @gray-selected;
@@ -54,6 +48,7 @@ html, body {
     padding: 10px 0px 10px 10px;
     font-size: 16px;
     font-weight: bold;
+    text-transform: uppercase;
   }
   #useremail{
     padding-bottom: 30px;
@@ -140,4 +135,21 @@ html, body {
 .help-text {
  padding: 10px;
   color: @text-gray;
+}
+
+.help-title {
+  text-align: center;
+  font-weight: bold;
+  padding-top:15px;
+  color: @text-gray;
+  font-size: 15px;
+  .fa {
+    width: 25px;
+  }
+}
+
+/************************************************/
+
+.results-list {
+  padding-top: 20px;
 }

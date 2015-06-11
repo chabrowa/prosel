@@ -10,15 +10,17 @@
   
     <div class="row-fluid">
       <div class="col-md-2" id="personal-information">
-        <div id="username"> Jon Snow</div>
-        <div id="useremail">mail@gmail.com</div>
-        <ul>
-          <li><i class="fa fa-cubes"></i>Dashboard</li>
-          <li><i class="fa fa-user"></i>Profile</li>
-          <li><i class="fa fa-sign-out"></i>Log out</li>
-        </ul>
+        <div class="personal-information-inner">
+          <div id="username"> Jon Snow</div>
+          <div id="useremail">mail@gmail.com</div>
+          <ul>
+            <li><i class="fa fa-cubes"></i>Dashboard</li>
+            <li><i class="fa fa-user"></i>Profile</li>
+            <li><i class="fa fa-sign-out"></i>Log out</li>
+          </ul>
+        </div>
       </div>
-      <div class="col-md-8" id="basic-container">
+      <div class="col-md-7" id="basic-container">
         <paper-material elevation="1" class="material-page selection-content">
           <div class="col-md-6 selection-left-side">
             <div class="section-navigation row-fluid">
@@ -46,10 +48,27 @@
             </div>
           </div>
 
+          <div class="col-md-6 selection-right-side">
+            <ul class="list-group green-results results-list">
+              <li class="list-group-item list-group-item-success">Super material 1</li>
+              <li class="list-group-item list-group-item-success">Super material 2</li>
+              <li class="list-group-item list-group-item-success">Super material 3</li>
+              <li class="list-group-item list-group-item-success">Super material 4</li>
+              <li class="list-group-item list-group-item-success">Super material 5</li>
+            </ul>
+            <ul class="list-group red-results results-list">
+              <li class="list-group-item list-group-item-danger">Bad material 1</li>
+              <li class="list-group-item list-group-item-danger">Bad material 2</li>
+              <li class="list-group-item list-group-item-danger">Bad material 3</li>
+              <li class="list-group-item list-group-item-danger">Bad material 4</li>
+              <li class="list-group-item list-group-item-danger">Bad material 5</li>
+            </ul>
+          </div>
         </paper-material>
       </div>
-      <div class="col-md-2" id="help-container-new">
+      <div class="col-md-3" id="help-container-new">
         <paper-material elevation="1" class="material-page help-content">
+          <div class="help-title"><i class="fa fa-medkit"></i> Help</div>
           <div class="help-text">
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
             

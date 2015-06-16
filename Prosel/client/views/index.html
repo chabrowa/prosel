@@ -1,57 +1,54 @@
-<template name="logged">
-  <header role="banner" class="navbar navbar-fixed-top navbar-inverse logged-header">
-      <div class="topBar">
-        <div class="navbar-inverse side-collapse in">
-          <nav role="navigation" class="navbar-collapse">
-            <ul class="nav navbar-nav  bars-menu">
-              <a href="#menu-toggle" class="color-black" id="menu-toggle"><i class="fa fa-bars"></i></a>
-            </ul>
-          </nav>
-        </div>
+<template name="index">
+
+ <header id="logged-header">
+     <div class="drop-down-menu">
+        <label for="menu-id"><i class="fa fa-bars"></i> PROSEL</label>
+        <input type="checkbox" class="menu-checkbox" id="menu-id">
+        <ul class="drop-menu-content">
+          <div id="username"> Jon Snow</div>
+          <div id="useremail">mail@gmail.com</div>
+          <li><i class="fa fa-cubes"></i><div class="pers-menu-item">Dashboard</div></li>
+          <li><i class="fa fa-user"></i><div class="pers-menu-item">Profile</div></li>
+          <li><i class="fa fa-medkit"></i><div class="pers-menu-item">Help</div></li>
+          <li><i class="fa fa-info"></i><div class="pers-menu-item">About</div></li>
+          <li><i class="fa fa-sign-out"></i><div class="pers-menu-item">Log out</div></li>
+        </ul>
       </div>
-    </header>
+   {{> sectionsNavigation }}
+  </header>
 
-    <div id="wrapper" class="col-md-3">
-      <div class="container side-collapse-container">
-        <!-- Sidebar -->
-        <div id="sidebar-wrapper">
-            <ul class="sidebar-nav">
-                <li>
-                  <span>Jan Kowalski</span>
-                </li>
-                <li>
-                  <p>mail@gmail.com</p>
-                </li>
-                <li class="sidebar-brand">
-                    <a href="#">Control Panel</a>
-                </li>
-                <li>
-                    <a href="#">Dashboard</a>
-                </li>
-                <li>
-                    <a href="#">Profile</a>
-                </li>
-                <li>
-                    <a href="#">Sign Out</a>
-                </li>
-            </ul>
-        </div>
-        <!-- /#sidebar-wrapper -->
-
-        <!-- Page Content -->
-        <div id="page-content-wrapper">
-                        {{>first }}
-                        {{>help }}
-        </div>
-        <!-- /#page-content-wrapper -->
-
-    </div>
-    <!-- /#wrapper -->
+  <div class="main-container">
+      <div id="selection-page"><div class="selection-page-inner"><!--{{>selectionRouter}}-->   {{> third}}</div></div>
+      <div id="materials-list"><div class="materials-list-inner">{{>materials}}</div></div>
   </div>
-  
-  <div>
-    <div class="newSelectionBtn">
-      <paper-fab icon="add" id="addBtn"></paper-fab>
-    </div>
-  </div>
+</template>
+
+<template name="materials">
+   <ul class="list-group green-results results-list">
+    <li class="list-group-item list-group-item-success">Super material 1</li>
+    <li class="list-group-item list-group-item-success">Super material 2</li>
+    <li class="list-group-item list-group-item-success">Super material 3</li>
+    <li class="list-group-item list-group-item-success">Super material 4</li>
+    <li class="list-group-item list-group-item-success">Super material 5</li>
+  </ul>
+  <ul class="list-group red-results results-list">
+    <li class="list-group-item list-group-item-danger">Bad material 1</li>
+    <li class="list-group-item list-group-item-danger">Bad material 2</li>
+    <li class="list-group-item list-group-item-danger">Bad material 3</li>
+    <li class="list-group-item list-group-item-danger">Bad material 4</li>
+    <li class="list-group-item list-group-item-danger">Bad material 5</li>
+  </ul>
+</template>
+
+<template name="sectionsNavigation">
+  <ul id="selection-menu-list">
+    <li id="step-1-item">Step 1</li>
+    <li id="step-2-item">Step 2</li>
+    <li id="step-3-item">Step 3</li>
+    <li id="step-4-item">Step 4</li>
+  </ul>
+</template>
+
+<template name="nabbarSearch">
+  <i class="fa fa-search"></i><input type="text" placeholder="Search">
 </template>

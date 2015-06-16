@@ -5,7 +5,7 @@
     <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
-  
+
   <link rel="import" href="bower_components/iron-icons/iron-icons.html">
   <link rel="import" href="bower_components/paper-checkbox/paper-checkbox.html">
   <link rel="import" href="bower_components/paper-fab/paper-fab.html">
@@ -14,13 +14,13 @@
   <link rel="import" href="bower_components/paper-icon-button/paper-icon-button.html">
   <link rel="import" href="bower_components/paper-radio-group/paper-radio-group.html">
   <link rel="import" href="bower_components/paper-radio-button/paper-radio-button.html">
-  
+
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <body id="page-top" class="index">
 
-    {{> landing}}
+    {{> index}}
 
 </body>
 
@@ -28,7 +28,7 @@
   {{#if goToHome}}
     {{> landing}}
   {{else}}
-    {{> logged}}
+    {{> index}}
   {{/if}}
 </template>
 
@@ -39,7 +39,7 @@
     {{>second}}
   {{else}} {{#if goToThird}}
     {{>third}}
-  {{else}} 
+  {{else}}
     {{> fourth}}
   {{/if}}{{/if}}{{/if}}
 </template>

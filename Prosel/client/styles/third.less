@@ -1,11 +1,42 @@
+@import "variables.less";
+
 .paper-section {
   background-color: white;
   margin: 10px;
+  font-size: 16px;
+  font-weight: 100;
   .paper-section-inner {
-    padding: 10px;
+    padding: 15px 10px 15px 30px;
+    display: flex;
+    .selection-left-section {
+      order: 1;
+      flex-grow: 2;
+      width: 100%;
+    }
+    .selection-right-section {
+      order: 2;
+      flex-grow: 2;
+      width: 100%;
+      padding-top: 20px;
+    }
   }
 }
 .section-title {
   padding-top: 10px;
   padding-left: 10px;
+}
+
+paper-toggle-button {
+  padding-top: 7px;
+  padding-right: 10px;
+}
+
+.selection-input {
+  border: none;
+  border-bottom: 1px solid @text-gray;
+  cursor: text;
+}
+
+input:focus{
+    outline: 0;
 }

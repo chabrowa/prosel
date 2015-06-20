@@ -1,0 +1,34 @@
+@import '/variables.less';
+
+.buttons-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  .generalBtn {
+    background-color: transparent;
+    border: 1px solid @wet_asphalt-dark;
+    border-radius: 20px;
+    padding: 5px 20px;
+  }
+  .navigationBnt {
+    
+  }
+  .submintBtn {
+  
+  } 
+  #previousBtn {
+    order: 1;
+    flex-grow: 1;
+    width: 25%;
+  }
+  #middleBtn {
+    order: 2;
+    flex-grow: 3;
+    width: 40%
+  }
+  #nextBtn {
+    order: 3;
+    flex-grow: 1;
+    width: 25%;
+  }
+}

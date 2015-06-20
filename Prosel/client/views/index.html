@@ -14,29 +14,30 @@
           <li><i class="fa fa-sign-out"></i><div class="pers-menu-item">Log out</div></li>
         </ul>
       </div>
+   <!--{{> navbarSearch }}-->
    {{> sectionsNavigation }}
   </header>
 
   <div class="main-container">
-      <div id="selection-page"><div class="selection-page-inner"><!--{{>selectionRouter}}-->   {{> third}}</div></div>
-      <div id="materials-list"><div class="materials-list-inner">{{>materials}}</div></div>
+      <div id="selection-page"><div class="selection-page-inner"><!--{{>selectionRouter}}-->   {{> third}} </div></div>
+      <div id="materials-list"><div class="materials-list-inner"><!--{{>materials}}--> {{>materials}} </div></div>
   </div>
 </template>
 
 <template name="materials">
    <ul class="list-group green-results results-list">
-    <li class="list-group-item list-group-item-success">Super material 1</li>
-    <li class="list-group-item list-group-item-success">Super material 2</li>
-    <li class="list-group-item list-group-item-success">Super material 3</li>
-    <li class="list-group-item list-group-item-success">Super material 4</li>
-    <li class="list-group-item list-group-item-success">Super material 5</li>
+    <li class="list-group-item">Super material 1</li>
+    <li class="list-group-item">Super material 2</li>
+    <li class="list-group-item">Super material 3</li>
+    <li class="list-group-item">Super material 4</li>
+    <li class="list-group-item">Super material 5</li>
   </ul>
   <ul class="list-group red-results results-list">
-    <li class="list-group-item list-group-item-danger">Bad material 1</li>
-    <li class="list-group-item list-group-item-danger">Bad material 2</li>
-    <li class="list-group-item list-group-item-danger">Bad material 3</li>
-    <li class="list-group-item list-group-item-danger">Bad material 4</li>
-    <li class="list-group-item list-group-item-danger">Bad material 5</li>
+    <li class="list-group-item">Bad material 1</li>
+    <li class="list-group-item">Bad material 2</li>
+    <li class="list-group-item">Bad material 3</li>
+    <li class="list-group-item">Bad material 4</li>
+    <li class="list-group-item">Bad material 5</li>
   </ul>
 </template>
 
@@ -49,6 +50,10 @@
   </ul>
 </template>
 
-<template name="nabbarSearch">
-  <i class="fa fa-search"></i><input type="text" placeholder="Search">
+<template name="navbarSearch">
+  <div class="search-section-wrapper">
+    <div class="search-section">
+      <i class="fa fa-search"></i><input type="text" class="search-input" placeholder="Search">
+    </div>
+  </div>
 </template>

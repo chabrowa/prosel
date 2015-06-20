@@ -1,83 +1,75 @@
 <!-- third -->
 <template name="third">
 
-<form class="step3">
-  <div class="section-title">Section name 1</div>
-  <paper-material elevation="1" class="paper-section">
-    <div class="paper-section-inner">
-      <label for="Aprod">Annual production volume: </label>
-      <input type="text" id="Aprod">
+  <form class="step3">
+    <div class="section-title">Section name 1</div>
+    <paper-material elevation="1" class="paper-section">
+      <div class="paper-section-inner">
+        <div class="selection-left-section">
+          <label for="Aprod">Annual production volume: </label>
+          <br>
+          <input class="selection-input" type="text" id="Aprod">
+          <br>
+        </div>
+        <div class="selection-right-section">
+          <paper-toggle-button>
+            <!--<input type="checkbox" name="MS" value="Y" > Yes-->
+          </paper-toggle-button>
+          <label for="MatchedSurface">Matched Surface </label>
 
-        <br>
+          <br>
 
-      <label for="MatchedSurface">Matched Surface </label>
-        <paper-toggle-button>
-          <input type="checkbox" name="MS" value="Y" > Yes
-        </paper-toggle-button>
+        
+          <paper-toggle-button>
+            <!--<input type="checkbox" name="EI" value="Y" > Yes-->
+          </paper-toggle-button>
+          <label>Embedded Inserts </label>
 
+          <br>
 
-        <br>
+        
+          <paper-toggle-button></paper-toggle-button>
+<!--            <input type="checkbox" name="CC" value="Y" > Yes-->
+          <label >CoCuring </label>
 
-      <label>Embedded Inserts </label>
-        <paper-toggle-button>
-          <input type="checkbox" name="EI" value="Y" > Yes
-        </paper-toggle-button>
-
-
-        <br>
-
-      <label >CoCuring </label>
-        <paper-toggle-button>
-          <input type="checkbox" name="CC" value="Y" > Yes
-        </paper-toggle-button>
-
-      <br>
-    </div>
-  </paper-material>
-
-  <div class="section-title">Section name 2</div>
-  <paper-material elevation="1" class="paper-section">
-    <div class="paper-section-inner">
-      <label> Suitable for</label>
-      <br>
-
-      <paper-toggle-button></paper-toggle-button>
-      <label >beading </label>
-      <!-- <input type="checkbox" name="Sbeading" value="Y" > Yes -->
-
-        <br>
-
-
-      <paper-toggle-button></paper-toggle-button>
-      <label >blades </label>
-      <!-- <input type="checkbox" name="Sblades" value="Y" > Yes -->
-
-        <br>
-
-
-      <paper-toggle-button></paper-toggle-button>
-      <label >hats </label>
-      <!-- <input type="checkbox" name="Shats" value="Y" > Yes -->
-
-        <br>
-
-
-      <paper-toggle-button></paper-toggle-button>
-      <label >foam </label>
-      <!-- <input type="checkbox" name="Sfoam" value="Y" > Yes -->
-
-        <br>
-
-
-      <paper-toggle-button></paper-toggle-button>
-      <label >honeycomb </label>
-      <!-- <input type="checkbox" name="Shoneycomb" value="Y" > Yes -->
-
-        <br>
+          <br>
+        </div>
       </div>
-  </paper-material>
+    </paper-material>
 
-    {{> navigationButtons}}
-</form>
+    <div class="section-title">Section name 2</div>
+    <paper-material elevation="1" class="paper-section">
+      <div class="paper-section-inner">
+        <div class="selection-left-section">
+          <label> Suitable for</label>
+          <br>
+          <paper-toggle-button></paper-toggle-button>
+          <label >beading </label>
+          <!-- <input type="checkbox" name="Sbeading" value="Y" > Yes -->
+            <br>
+          <paper-toggle-button></paper-toggle-button>
+          <label >blades </label>
+          <!-- <input type="checkbox" name="Sblades" value="Y" > Yes -->
+            <br>
+          <paper-toggle-button></paper-toggle-button>
+          <label >hats </label>
+          <!-- <input type="checkbox" name="Shats" value="Y" > Yes -->
+            <br>
+        </div>
+        <div class="selection-right-section">
+          <paper-toggle-button></paper-toggle-button>
+          <label >foam </label>
+          <!-- <input type="checkbox" name="Sfoam" value="Y" > Yes -->
+            <br>
+          <paper-toggle-button></paper-toggle-button>
+          <label >honeycomb </label>
+          <!-- <input type="checkbox" name="Shoneycomb" value="Y" > Yes -->
+            <br>
+        </div>
+        </div>
+    </paper-material>
+
+      {{> navigationButtons}}
+  </form>
 
 </template>

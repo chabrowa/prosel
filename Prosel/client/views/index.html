@@ -25,20 +25,39 @@
 </template>
 
 <template name="materials">
-   <ul class="list-group green-results results-list">
-    <li class="list-group-item">Super material 1</li>
-    <li class="list-group-item">Super material 2</li>
-    <li class="list-group-item">Super material 3</li>
-    <li class="list-group-item">Super material 4</li>
-    <li class="list-group-item">Super material 5</li>
-  </ul>
-  <ul class="list-group red-results results-list">
-    <li class="list-group-item">Bad material 1</li>
-    <li class="list-group-item">Bad material 2</li>
-    <li class="list-group-item">Bad material 3</li>
-    <li class="list-group-item">Bad material 4</li>
-    <li class="list-group-item">Bad material 5</li>
-  </ul>
+  <div class="material-list">
+    <div class="materials-list-title">Materials list</div>
+    <div class="suitable">
+      <div class="materials-section-title" id="toggle-suitable">Panel heading 1</div>
+       <ul class="{{#if showSuitable}} {{else}} materialsVisible {{/if}}">
+        <li>Super material 1</li>
+        <li>Super material 2</li>
+        <li>Super material 3</li>
+        <li>Super material 4</li>
+        <li>Super material 5</li>
+        <li>Super material 1</li>
+        <li>Super material 2</li>
+        <li>Super material 3</li>
+        <li>Super material 4</li>
+        <li>Super material 5</li>
+      </ul>
+    </div>
+    <div class="rejected">
+      <div class="materials-section-title" id="toggle-rejected">Panel heading 2</div>
+      <ul class="{{#if showRejected}} {{else}} materialsVisible {{/if}}">
+        <li>Bad material 1</li>
+        <li>Bad material 2</li>
+        <li>Bad material 3</li>
+        <li>Bad material 4</li>
+        <li>Bad material 5</li>
+        <li>Bad material 1</li>
+        <li>Bad material 2</li>
+        <li>Bad material 3</li>
+        <li>Bad material 4</li>
+        <li>Bad material 5</li>
+      </ul>
+    </div>
+  </div>
 </template>
 
 <template name="sectionsNavigation">

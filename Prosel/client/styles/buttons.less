@@ -2,33 +2,35 @@
 
 .buttons-wrapper {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   width: 100%;
+  margin-top: 30px;
   .generalBtn {
     background-color: transparent;
     border: 1px solid @wet_asphalt-dark;
     border-radius: 20px;
-    padding: 5px 20px;
+    padding: 8px 20px;
+    width: 100%;
+    text-transform: uppercase;
+
   }
-  .navigationBnt {
-    
-  }
-  .submintBtn {
-  
-  } 
-  #previousBtn {
+  #first {
     order: 1;
-    flex-grow: 1;
-    width: 25%;
+    flex-grow: 2;
+    flex-basis: 0;
+    margin: 0px 10px 0px 20px;
   }
-  #middleBtn {
+  #second {
     order: 2;
-    flex-grow: 3;
-    width: 40%
+    flex-grow: 4;
+    flex-basis: 0;
+    margin: 0px 10px;
   }
-  #nextBtn {
+  #third {
     order: 3;
-    flex-grow: 1;
-    width: 25%;
+    flex-grow: 2;
+    flex-basis: 0;
+    margin: 0px 20px 0px 10px;
   }
 }
+

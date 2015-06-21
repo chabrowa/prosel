@@ -1,0 +1,66 @@
+@import '/variables.less';
+
+.material-list{
+  max-height: 70vh;
+  overflow-y: scroll;
+  background-color: white;
+  border: 1px solid @line-gray;
+  border-top-right-radius: 7px;
+  border-top-left-radius: 7px;
+  .materials-list-title {
+    background-color: dodgerblue;
+    border: 1px solid @brand-primary;
+    padding: 5px;
+    color: white;
+    font-weight: bold;
+  }
+  .rejected {
+    .materials-section-title {
+      background-color: #F2836B;
+      padding: 5px;
+      border: 1px solid @addnew-red;
+      color: white;
+      font-weight: bold;
+    }
+    .materialsVisible {
+      height: 0px;
+      overflow: hidden;
+    }
+    ul {
+      list-style-type: none;
+      padding: 0px;
+      margin: 0px;
+
+      li {
+       background-color: white;
+       border: 1px solid @line-gray;
+       padding: 5px;
+
+      }
+    }
+  }
+  .suitable {
+     .materials-section-title {
+      background-color: #16CC96;
+      padding: 5px;
+      border: 1px solid #3E997E;
+      color: white;
+       font-weight: bold;
+    }
+    .materialsVisible {
+      height: 0px;
+      overflow: hidden;
+    }
+    ul {
+      list-style-type: none;
+      padding: 0px;
+      margin: 0px;
+      li {
+       background-color: white;
+       border: 1px solid @line-gray;
+       padding: 5px;
+
+      }
+    }
+  }
+}

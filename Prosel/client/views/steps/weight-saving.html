@@ -1,0 +1,90 @@
+<!-- second -->
+
+<template name="second">
+  <form class="step2">
+    <paper-material elevation="1" class="paper-section">
+    {{>stepHeader title='Section name 2' }}
+      <div class="inner-section">
+        <div class="selection-split">
+          <div class="split-left">
+            <label>Stressing Precision suited for</label><br>
+            <!--<input type="checkbox" value="1">-->
+            <paper-toggle-button></paper-toggle-button><label>V - precisely defined loading</label><br>
+            <!--<input type="checkbox" value="2">-->
+            <paper-toggle-button></paper-toggle-button><label> L - eneral uncertain loading</label><br>
+            <!--<input type="checkbox" value="3">-->
+            <paper-toggle-button></paper-toggle-button><label> M - either</label><br>
+            <!--<input type="checkbox" value="4">-->
+            <paper-toggle-button></paper-toggle-button><label> H - either</label><br>
+          </div>
+          <div class="split-right">
+              <div class="selection-note">Note: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              </div>
+          </div>
+        </div>
+      </div>
+      <div class="inner-section">
+        <div class="selection-split">
+          <div class="split-left">
+            <label for="TensileStiffness">Tensile Stiffness above(GPA): </label><br>
+            <input type="text" class="selection-input" id="TensileStiffness">
+          </div>
+          <div class="split-right">
+            <div class="selection-note">Note: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="inner-section">
+        <div class="selection-split">
+          <div class="split-left">
+            <label for="TensileStrength">Tensile Strength above(MPA): </label><br>
+            <input type="text" class="selection-input" id="TensileStrength">
+          </div>
+          <div class="split-right">
+              <div class="selection-note">Note: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </div>
+          </div>
+        </div>
+      </div>
+      <div class="inner-section">
+        <label>Ply Angle:</label><br>
+        <div class="selection-split">
+          <div class="split-left">
+          <!--<input type="checkbox" value="1">-->
+          <paper-toggle-button></paper-toggle-button><label>Low</label> <br>
+    <!--      <input type="checkbox" value="2">-->
+          <paper-toggle-button></paper-toggle-button><label>Medium</label> <br>
+          <!--<input type="checkbox" value="3">-->
+          <paper-toggle-button></paper-toggle-button><label>High</label><br>
+          </div>
+          <div class="split-right">
+              <div class="selection-note">Note: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="inner-section">
+        <label>Thickness Tailoring:</label><br>
+        <div class="selection-split">
+          <div class="split-left">
+            <!--<input type="checkbox" value="1">-->
+            <paper-toggle-button></paper-toggle-button><label>Constant thickness</label><br>
+            <!--<input type="checkbox" value="2">Low (0.5mm)-->
+            <paper-toggle-button></paper-toggle-button><label>Low (0.5mm</label><br>
+            <!--<input type="checkbox" value="3">Medium (0.25mm)-->
+            <paper-toggle-button></paper-toggle-button><label>Medium (0.25mm)</label><br>
+            <!--<input type="checkbox" value="4">High (0.125mm)-->
+            <paper-toggle-button></paper-toggle-button><label>High (0.125mm)</label><br>
+          </div>
+           <div class="split-right">
+              <div class="selection-note">Note: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </div>
+          </div>
+        </div>
+      </div>
+      {{> submitBnt}}
+    </paper-material>
+  </form>
+</template>

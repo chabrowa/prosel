@@ -1,0 +1,100 @@
+<!-- first -->
+<template name="first">
+   <form class="step1">
+      <paper-material elevation="1" class="paper-section">
+        
+        {{>stepHeader title='Section name 1' }}
+
+        <div class="inner-section">
+          <div class="selection-split">
+            <div class="split-left">
+              <label for="shape">Shape: </label><br>
+              <select id="shape">
+                <option value="Shells">Shells</option>
+                <option value="Panels">Panels</option>
+                <option value="Frames">Frames</option>
+                <option value="Stiffeners">Stiffeners</option>
+                <option value="Tubes">Tubes</option>
+                <option value="Tanks">Cylindrical Pressure</option>
+                <option value="Complex">Complex multi feature</option>
+              </select>
+            </div>
+            <div class="split-right">
+              <div class="selection-note">Note: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="inner-section">
+          <div class="selection-split">
+            <div class="split-left">
+              <label for="ExtraShape">Extra Shape: </label><br>
+              <select id="ExtraShape">
+                  {{#each step1}}
+                      <option value="{{this}}">{{this}}</option>
+                  {{/each}}
+              </select>
+            </div>
+            <div class="split-right">
+            <div class="selection-note">Note: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="inner-section">
+          <label>Size</label><br>
+          <label class="min-max-size">max</label>
+          <input type="text" class="selection-input" id="maxSize1" placeholder="unit - mm">
+          <i class="fa fa-times"></i>
+          <input type="text" class="selection-input" id="maxSize2" placeholder="unit - mm">
+          <br>
+          <label class="min-max-size">min </label>
+          <input type="text" class="selection-input" id="minSize1" placeholder="unit - mm">
+          <i class="fa fa-times"></i>
+          <input type="text" class="selection-input" id="minSize2" placeholder="unit - mm">
+        </div>
+        <div class="inner-section">
+          <label>Thickness:</label><br>
+          <label class="min-max-size" for="MaxThickness">max</label>
+           <input type="text" class="selection-input" id="MaxThickness" placeholder="unit - mm">
+           <label class="min-max-size" for="MinThickness">min</label>
+           <input type="text" class="selection-input" id="MinThickness" placeholder="unit - mm">
+        </div>
+        <div class="inner-section">
+          <label >Surface Finish: </label><br>
+          
+          <!--<input type="checkbox" value="1">Low-->
+          <paper-toggle-button></paper-toggle-button><label>Low</label><br>
+          <!--<input type="checkbox" value="2">Medium-->
+          <paper-toggle-button></paper-toggle-button><label>Medium</label><br>
+          <!--<input type="checkbox" value="3">High-->
+          <paper-toggle-button></paper-toggle-button><label>High</label><br>
+        </div>
+        <div class="inner-section">
+          <label for="MinBendRadious">Min Bend Radious: </label><br>
+          <select id="MinBendRadious">
+            <option value="1">High (&lt;0.5mm) </option>
+            <option value="2">Medium (&lt;1.5mm) </option>
+            <option value="3">Low (&lt;2mm) </option>
+            <option value="4">Very Low (&gt;2mm) </option>
+          </select>
+          <paper-toggle-button></paper-toggle-button><label>Or higher</label>
+          <!--<input type="checkbox" id="MBRorHigher">Or higher-->
+        </div>
+        <div class="inner-section">
+          <label>Warpage: </label><br>
+          <!--<input type="checkbox" value="1">Very Low-->
+          <paper-toggle-button></paper-toggle-button><label>Very Low</label><br>
+          <!--<input type="checkbox" value="2">Low-->
+          <paper-toggle-button></paper-toggle-button><label>Low</label><br>
+          <!--<input type="checkbox" value="3">Medium-->
+          <paper-toggle-button></paper-toggle-button><label>Medium</label><br>
+          <!--<input type="checkbox" value="4">High-->
+          <paper-toggle-button></paper-toggle-button><label>High</label><br>
+          <!--<input type="checkbox" value="5">Very High-->
+          <paper-toggle-button></paper-toggle-button><label>Very High</label><br>
+        </div>
+        {{> submitBnt}}
+    </paper-material>
+  </form>
+</template>

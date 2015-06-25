@@ -1,0 +1,74 @@
+<!-- third -->
+<template name="third">
+
+  <form class="step3">
+    <paper-material elevation="1" class="paper-section">
+      {{>stepHeader title='Section name 3' }}
+      <div class="inner-section">
+        <div class="selection-split">
+            <div class="split-left">
+              <label for="Aprod">Annual production volume: </label><br>
+              <input class="selection-input" type="text" id="Aprod">
+          </div>
+          <div class="split-right">
+            <div class="selection-note">Note: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+          </div>
+        </div>
+      </div>
+      <div class="inner-section">
+        <div class="selection-split">
+          <div class="split-left">
+            <paper-toggle-button>
+              <!--<input type="checkbox" name="MS" value="Y" > Yes-->
+            </paper-toggle-button>
+            <label for="MatchedSurface">Matched Surface </label><br>
+            <paper-toggle-button>
+              <!--<input type="checkbox" name="EI" value="Y" > Yes-->
+            </paper-toggle-button>
+            <label>Embedded Inserts </label><br>
+            <paper-toggle-button></paper-toggle-button>
+    <!--            <input type="checkbox" name="CC" value="Y" > Yes-->
+            <label >CoCuring </label>
+          </div>
+          <div class="split-right">
+            <div class="selection-note">Note: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+          </div>
+        </div>
+        </div>
+      <div class="inner-section">
+        <label> Suitable for</label><br>
+        <div class="selection-split">
+          
+          <div class="split-left">
+            
+            <paper-toggle-button></paper-toggle-button>
+            <label >beading </label>
+            <!-- <input type="checkbox" name="Sbeading" value="Y" > Yes -->
+            <br>
+            <paper-toggle-button></paper-toggle-button>
+            <label >blades </label>
+            <!-- <input type="checkbox" name="Sblades" value="Y" > Yes -->
+            <br>
+            <paper-toggle-button></paper-toggle-button>
+            <label >hats </label>
+            <!-- <input type="checkbox" name="Shats" value="Y" > Yes -->
+            <br>
+            <paper-toggle-button></paper-toggle-button>
+            <label >foam </label>
+            <!-- <input type="checkbox" name="Sfoam" value="Y" > Yes -->
+            <br>
+            <paper-toggle-button></paper-toggle-button>
+            <label >honeycomb </label>
+            <!-- <input type="checkbox" name="Shoneycomb" value="Y" > Yes -->
+          </div>
+        
+          <div class="split-right">
+            <div class="selection-note">Note: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+          </div>
+        </div>
+      </div>
+      {{> submitBnt}}
+    </paper-material>
+      
+  </form>
+</template>

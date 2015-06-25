@@ -1,5 +1,6 @@
 @import '/variables.less';
 
+/*
 .buttons-wrapper {
   display: flex;
   flex-wrap: nowrap;
@@ -31,6 +32,25 @@
     flex-grow: 2;
     flex-basis: 0;
     margin: 0px 20px 0px 10px;
+  }
+}
+*/
+
+.buttons-wrapper {
+  width: 100%;
+  padding: 5px 0px;
+  .generalBtn {
+    background-color: @wet_asphalt-very-light;
+    border: 1px solid @wet_asphalt-light;
+    border-radius: 20px;
+    padding: 8px 20px;
+    width: 70%;
+    text-transform: uppercase;
+    margin: 10px 0px;
+    color: white;
+    outline: none;
+    right: 50%;
+    transform: translate(20%, 0%);
   }
 }
 
